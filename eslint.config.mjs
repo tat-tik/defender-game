@@ -12,6 +12,7 @@ export default [
       'prettier/prettier': 'error'
     }
   },
+
   {
     files: ['**/*.{js,mjs,cjs}'],
     ignores: ['node_modules/**', 'dist/**', 'build/**'],
@@ -26,7 +27,7 @@ export default [
     rules: {
       // Строгость
       strict: ['error', 'global'], // Требует "use strict"
-      'no-unused-vars': 'error', // Запрещает неиспользуемые переменные
+      "no-unused-vars": "error", // Запрещает неиспользуемые переменные
       'no-console': 'warn', // Предупреждение на console.log
       eqeqeq: 'error', // Требует === вместо ==
       curly: 'error', // Требует фигурные скобки для блоков
@@ -47,5 +48,8 @@ export default [
       'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }], // Не более 1 пустой строки
       'max-len': ['error', { code: 120 }] // Максимальная длина строки 120 символов
     }
-  }
+  },
+  module.exports = {
+        ignorePatterns: ["dist/*"],
+  },
 ];
